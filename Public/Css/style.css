@@ -1,0 +1,85 @@
+	/* GENERAL */
+body{
+	background:  #9b3740;	
+}
+h1{
+	text-align: center;
+	text-decoration: red underline;
+}
+.souligner{
+	text-decoration: #ab0413 underline;
+}
+
+
+	/* MENU */
+
+header{
+	text-align: center;
+	margin-bottom: 10px;
+	border: 2px #000 solid;
+}
+header ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 10px;
+}
+header a{
+	text-decoration: none;
+	color: #000;
+}
+header a:hover{
+	text-decoration: #ab0413 underline;
+}
+
+	/* CONTENUR */ 
+
+section{
+	display: flex;
+	justify-content: center;
+}
+div{
+	margin: 0 10px;
+	border: 2px #000 solid;
+	padding: 3px;
+}
+.list{
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+}
+.list li{
+	list-style: none;
+	padding: 10px 0;
+}
+img{
+	height: 200px;
+	width: 200px;
+	border: 4px #000 solid;
+}
+
+	/* GAUCHE */
+
+#left{
+	text-align: center;
+	height: 750px;
+}
+
+	/* GENRE */
+
+#category{
+	list-style: none;
+}
+
+	/* PAGINAGE */
+
+.paginage{
+	color: #000;
+	text-decoration: none;
+	margin: 0 2px;
+}
+.paginage:hover{
+	text-decoration: #ab0413 underline;
+}
+.active{
+	color: #ec061b ;
+}

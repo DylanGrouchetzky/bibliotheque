@@ -24,9 +24,9 @@ class View extends Database{
 		}
 	}
 
-	public function Paginage($tour, $table, $page){
+	public function Paginage($tour, $table, $page, $lien = null, $condition = null){
 		$mangaParPage = 10;
-		$mangaTotal = $this->Query($table,null,'total');
+		$mangaTotal = $this->Query($table,$condition,'total');
 		$nombreDePage = ceil($mangaTotal/$mangaParPage);
 
 		if(isset($page) AND $page>0){
@@ -48,7 +48,7 @@ class View extends Database{
 				if($i===$pageActuelle){
 					echo '<span class="active"> [ '.$i.' ] </span>';
 				}else{
-					echo '<a href="index.php?page='.$i.'" class="paginage">'.$i.'</a>';
+					echo '<a href="'.$lien.$i.'" class="paginage">'.$i.'</a>';
 				}
 			}
 		}

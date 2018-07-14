@@ -24,4 +24,11 @@ class Database{
 		}
 		return $info;
 	}
+
+	public function Insert($action, $table, $colonne, $values){
+		$db = $this->Connect();
+		if($action === 'insert'){
+			$insert = $db->prepare('INSERT INTO '.$table.'('.$colonne.') VALUES ('.$values.')');
+		}
+	}
 }

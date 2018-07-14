@@ -27,4 +27,4 @@ while($data = $list->fetch()){
 	</div>
 	<?php
 }
-$paginage = $view->Paginage('end', 'manga', $numberpage);
+$paginage = $view->Paginage('end', 'manga', $numberpage, 'index.php?page=');

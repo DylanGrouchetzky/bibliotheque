@@ -9,9 +9,9 @@
 	<header>
 		<ul>
 			<li><a href="index.php">Acceuil</a></li>
-			<li><a href="">Ajouter un Tome</a></li>
-			<li><a href="">Ajouter un Manga</a></li>
-			<li><a href="">Ajouter une Catégorie</a></li>
+			<li><a href="index.php?action=insert&in=tome">Ajouter un Tome</a></li>
+			<li><a href="index.php?action=insert&in=manga">Ajouter un Manga</a></li>
+			<li><a href="index.php?action=insert&in=category">Ajouter une Catégorie</a></li>
 			<li><a href="">Modifier</a></li>
 		</ul>
 	</header>
@@ -27,7 +27,7 @@
 			<h1>Les Genres</h1>
 			<ul id="category">
 				<?php
-				$category = $view->List('category', 'category');
+				$category = $view->List('category', 'category', 'ORDER BY category');
 				 ?>
 			</ul>
 		</div>

@@ -25,10 +25,14 @@ class Database{
 		return $info;
 	}
 
-	public function Insert($action, $table, $colonne, $values){
+	public function Insert($action, $table, $colonne, $valuesnumber = null, $values, $lien, $condition = null){
 		$db = $this->Connect();
 		if($action === 'insert'){
-			$insert = $db->prepare('INSERT INTO '.$table.'('.$colonne.') VALUES ('.$values.')');
+			$insert = $db->prepare('INSERT INTO '.$table.'('.$colonne.') VALUES ('.$valuesnumber.')');
+			$insert->execute($values);
+		}elseif($action === 'update'){
+			$updata = $db->prepare('UPDATE '.$table.' SET '.$colonne.' WHERE '.$condition);
+			$update->execute($values);
 		}
 	}
 }

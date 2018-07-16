@@ -17,8 +17,8 @@ class View extends Database{
 		}	
 	}
 
-	public function List($table, $name){
-		$nameList = $this->Query($table);
+	public function List($table, $name, $condition=null){
+		$nameList = $this->Query($table, $condition);
 		while($data = $nameList->fetch()){
 			echo '<li>'.$data[$name].'</li>';
 		}
@@ -52,5 +52,17 @@ class View extends Database{
 				}
 			}
 		}
+	}
+
+	public function Form($label = null, $typeForm, $type = null, $name = null, $value = null){
+		if($typeForm === 'input'){
+			echo '<p><label for="'.$name.'">'.$label.'</label><br>
+			<input type="'.$type.'" name="'.$name.'" id="'.$name.'"></p>';
+		}elseif($typeForm === 'select'){
+			echo '<option value="'.$value.'">'.$label.'</option>';
+		}elseif($typeForm === 'submit'){
+			echo '<input type="submit" value="'.$value.'">';
+		}
+
 	}
 }
